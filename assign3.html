@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Assignment 3 - Synthesizer</title>
+</head>
+
+<body>
+    <button type="button" id="start">Enable sound</button>
+    <button type="button" id="stop">Stop</button>
+
+
+    <!-- Waveform selector -->
+
+    <div class="row">
+        <div id="container">
+            <div class="column">
+
+                <div id="header">
+                    <h3>
+                        <a>Select Waveform</a>
+                    </h3>
+
+                </div>
+                <p>
+                    <label for="soundType">Select a waveform:</label> <select name="soundType" id="soundType">
+                        <option value="sine" selected>Sine</option>
+                        <option value="triangle">Triangle</option>
+                        <option value="square">Square</option>
+                        <option value="sawtooth">Sawtooth</option>
+                    </select>
+                </p>
+                <!--Volume Control-->
+                <div class="slidecontainer">
+                    Volume Slider<input type="range" min="1" max="100" value="50" class="slider" id="volume">
+                        Volume:
+                        <span id="demo"></span>
+                </div>
+
+
+
+
+            </div>
+        </div>
+        <div id="container">
+            <div class="column">
+                <div id="header">
+                    <h3>
+                        <a>Select Filter Type</a>
+                    </h3>
+                </div>
+                <p>
+                    <label for="filterType">Select a Filter Type:</label> <select name="filterType" id="filterType">
+                        <option value="allpass" selected>All Pass</option>
+                        <option value="lowpass">Low Pass</option>
+                        <option value="highpass">High Pass</option>
+                        <option value="lowshelf">Low Shelf</option>
+                        <option value ="highshelf">High Shelf</option>
+                    </select>
+
+                    
+
+                </p>
+
+                <div class="slidecontainer">
+                   Cut Off Frequency Selector - Value:
+                    <span id="freqdemo"></span>
+                   <input type="range" min="2093" max="3952" value="2973" class="slider" id="frequencyslide">
+                        
+                </div>
+
+                <div class="slidecontainer">
+                    Attack - Value:
+                    <span id="attackDemo"></span>
+                    <input type="range" min="0" max="10" value="5" class="slider" id="attackSlider">
+                        
+                </div>
+
+                <div class="slidecontainer">
+                    Decay - Value:
+                    <span id="decayDemo"></span>
+                    <input type="range" min="0" max="10" value="5" class="slider" id="decaySlider">
+                        
+                </div>
+
+                <div class="slidecontainer">
+                    Sustain - Value:
+                    <span id="sustainDemo"></span>
+                    <input type="range" min="0" max="10" value="5" class="slider" id="sustainSlider">
+                        
+                </div>
+
+
+                <div class="slidecontainer">
+                    Release - Value:
+                    <span id="releaseDemo"></span>
+                    <input type="range" min="0" max="10" value="5" class="slider" id="releaseSlider">
+                        
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="space"></div>
+    <p>Keyboard</p>
+
+
+
+
+
+
+    <!-- Keyboard placeholder -->
+    <div id="keyboard">
+    </div>
+    <script type="text/javascript" src="./assign3.js"></script>
+</body>
+
+</html>
